@@ -1,5 +1,60 @@
-.card {
-  height: 150px;
-  width: 150px;
-  border: 1px solid black;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Spartan:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+#pokedex {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin: 0 3rem;
+}
+
+#card {
+  height: 250px;
+  background-color: white;
+  border-radius: 5px;
+  min-height: 100px;
+
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px #333;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  filter: saturate(0);
+}
+
+#card:hover {
+  transform: rotate(-5deg);
+  filter: blur(0);
+}
+
+#card img {
+  width: 100%;
+  padding: 1rem;
+}
+
+.pokemonName {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  filter: blur(0) !important;
 }
